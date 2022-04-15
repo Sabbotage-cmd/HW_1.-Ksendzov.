@@ -48,3 +48,21 @@ GitBash Linux.
 **less learn_qa2/file_1.txt**
 1. Вывести дату и время:  
 **date**
+
+
+1. Отправить http запрос на сервер. http://162.55.220.72:5005/terminal-hw-request:  
+**curl http://162.55.220.72:5005/terminal-hw-request**
+1. Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:  
+  
+cat > script.sh  
+#!/bin/bash  
+cd /home/user/QA/  
+mkdir learn_qa1 learn_qa2 learn_qa3  
+cd learn_qa1  
+cat file1.txt file2.txt file3.txt file1.json file2.json  
+mkdir repo1 repo2 repo3  
+ls –la  
+mv file_1.txt file_2.txt learn_qa2  
+// Enter, Ctrl+C  
+chmod +x script.sh  
+bash script.sh  
